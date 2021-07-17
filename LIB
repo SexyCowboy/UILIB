@@ -1,0 +1,374 @@
+local HOLDER = Instance.new("Frame")
+local MAIN_2 = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Title = Instance.new("ImageLabel")
+local TEXT = Instance.new("TextLabel")
+local Toggle = Instance.new("ImageLabel")
+local Toggle_2 = Instance.new("ImageLabel")
+local Circle = Instance.new("ImageButton")
+local TEXT_2 = Instance.new("TextLabel")
+local DropDown = Instance.new("ImageLabel")
+local TEXT_3 = Instance.new("TextLabel")
+local DropDownButton = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local ColorThing = Instance.new("ImageLabel")
+local TEXT_4 = Instance.new("TextLabel")
+local BUTTON = Instance.new("ImageLabel")
+local Hot = Instance.new("TextButton")
+local TAB1 = Instance.new("TextButton")
+local TextButton_Roundify_12px = Instance.new("ImageLabel")
+local UIListLayout_3 = Instance.new("UIListLayout")
+
+local Lib = {}
+
+function CreateMain(Title,Version)
+	--- Creating the items
+	local ScreenGui = Instance.new("ScreenGui")
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+	local Version = Instance.new("TextLabel")
+	local SIDEBAR = Instance.new("ImageLabel")
+	local TABS = Instance.new("Frame")
+	local MAIN = Instance.new("ImageLabel")
+	local Title_2 = Instance.new("TextLabel")
+	local Divider = Instance.new("ImageLabel")
+	-- Giving dem properties
+	
+	MAIN.Name = "MAIN"
+	MAIN.Parent = ScreenGui
+	MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
+	MAIN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MAIN.BackgroundTransparency = 1.000
+	MAIN.Position = UDim2.new(0.534083188, 0, 0.5, 0)
+	MAIN.Size = UDim2.new(0.281833678, 0, 0.349999994, 0)
+	MAIN.ZIndex = 2
+	MAIN.Image = "rbxassetid://3570695787"
+	MAIN.ImageColor3 = Color3.fromRGB(57, 62, 70)
+	MAIN.ScaleType = Enum.ScaleType.Slice
+	MAIN.SliceCenter = Rect.new(100, 100, 100, 100)
+	MAIN.SliceScale = 0.120
+	
+	SIDEBAR.Name = "SIDEBAR"
+	SIDEBAR.Parent = ScreenGui
+	SIDEBAR.AnchorPoint = Vector2.new(0.5, 0.5)
+	SIDEBAR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	SIDEBAR.BackgroundTransparency = 1.000
+	SIDEBAR.Position = UDim2.new(0.357604951, 0, 0.5, 0)
+	SIDEBAR.Size = UDim2.new(0.0979296789, 0, 0.349999994, 0)
+	SIDEBAR.ZIndex = 2
+	SIDEBAR.Image = "rbxassetid://3570695787"
+	SIDEBAR.ImageColor3 = Color3.fromRGB(34, 40, 49)
+	SIDEBAR.ScaleType = Enum.ScaleType.Slice
+	SIDEBAR.SliceCenter = Rect.new(100, 100, 100, 100)
+	SIDEBAR.SliceScale = 0.120
+	
+	TABS.Name = "TABS"
+	TABS.Parent = SIDEBAR
+	TABS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TABS.BackgroundTransparency = 1.000
+	TABS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	TABS.Position = UDim2.new(0.049999956, 0, 0.273444355, 0)
+	TABS.Size = UDim2.new(0.899999976, 0, 0.661437333, 0)
+	TABS.ZIndex = 3
+	
+	Divider.Name = "Divider"
+	Divider.Parent = SIDEBAR
+	Divider.AnchorPoint = Vector2.new(0.5, 0)
+	Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Divider.BackgroundTransparency = 1.000
+	Divider.Position = UDim2.new(0.5, 0, 0.229798377, 0)
+	Divider.Size = UDim2.new(0.899999976, 0, 0, 2)
+	Divider.ZIndex = 3
+	Divider.Image = "rbxassetid://3570695787"
+	Divider.ImageColor3 = Color3.fromRGB(0, 173, 181)
+	Divider.ScaleType = Enum.ScaleType.Slice
+	Divider.SliceCenter = Rect.new(100, 100, 100, 100)
+	Divider.SliceScale = 0.120
+	
+	Title_2.Name = "Title"
+	Title_2.Parent = SIDEBAR
+	Title_2.AnchorPoint = Vector2.new(0.5, 0)
+	Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title_2.BackgroundTransparency = 1.000
+	Title_2.Position = UDim2.new(0.5, 0, 0.0350569673, 0)
+	Title_2.Size = UDim2.new(0.942219853, 0, 0.126380354, 0)
+	Title_2.ZIndex = 3
+	Title_2.Font = Enum.Font.GothamBold
+	Title_2.Text = Title
+	Title_2.TextColor3 = Color3.fromRGB(238, 238, 238)
+	Title_2.TextScaled = true
+	Title_2.TextSize = 14.000
+	Title_2.TextWrapped = true
+	
+	Version.Name = "Version"
+	Version.Parent = SIDEBAR
+	Version.AnchorPoint = Vector2.new(0.5, 0)
+	Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Version.BackgroundTransparency = 1.000
+	Version.Position = UDim2.new(0.5, 0, 0.129710779, 0)
+	Version.Size = UDim2.new(0.399168104, 0, 0.0714736357, 0)
+	Version.ZIndex = 3
+	Version.Font = Enum.Font.GothamBold
+	Version.Text = Version
+	Version.TextColor3 = Color3.fromRGB(238, 238, 238)
+	Version.TextScaled = true
+	Version.TextSize = 14.000
+	Version.TextWrapped = true
+end
+
+return Lib;
+--[[
+
+HOLDER.Name = "HOLDER"
+HOLDER.Parent = MAIN
+HOLDER.AnchorPoint = Vector2.new(0.5, 0)
+HOLDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HOLDER.BackgroundTransparency = 1.000
+HOLDER.Position = UDim2.new(0.523727238, 0, 0.0560911484, 0)
+HOLDER.Size = UDim2.new(0.953000069, 0, 0.887817681, 0)
+HOLDER.ZIndex = 2
+
+MAIN_2.Name = "MAIN"
+MAIN_2.Parent = HOLDER
+MAIN_2.Active = true
+MAIN_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MAIN_2.BackgroundTransparency = 1.000
+MAIN_2.BorderSizePixel = 0
+MAIN_2.Size = UDim2.new(1, 0, 1, 0)
+MAIN_2.ZIndex = 2
+MAIN_2.ScrollBarThickness = 4
+MAIN_2.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIListLayout.Parent = MAIN_2
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0199999996, 0)
+
+Title.Name = "Title"
+Title.Parent = MAIN_2
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0500000864, 0, 0, 0)
+Title.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+Title.ZIndex = 3
+Title.Image = "rbxassetid://3570695787"
+Title.ImageColor3 = Color3.fromRGB(34, 40, 49)
+Title.ScaleType = Enum.ScaleType.Slice
+Title.SliceCenter = Rect.new(100, 100, 100, 100)
+Title.SliceScale = 0.120
+
+TEXT.Name = "TEXT"
+TEXT.Parent = Title
+TEXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXT.BackgroundTransparency = 1.000
+TEXT.Position = UDim2.new(0.0197396576, 0, 0, 0)
+TEXT.Size = UDim2.new(1, 0, 1, 0)
+TEXT.ZIndex = 4
+TEXT.Font = Enum.Font.GothamBold
+TEXT.Text = "ESP"
+TEXT.TextColor3 = Color3.fromRGB(255, 255, 255)
+TEXT.TextScaled = true
+TEXT.TextSize = 14.000
+TEXT.TextWrapped = true
+
+Toggle.Name = "Toggle"
+Toggle.Parent = MAIN_2
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BackgroundTransparency = 1.000
+Toggle.Position = UDim2.new(0.0500000864, 0, 0, 0)
+Toggle.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+Toggle.ZIndex = 3
+Toggle.Image = "rbxassetid://3570695787"
+Toggle.ImageColor3 = Color3.fromRGB(34, 40, 49)
+Toggle.ScaleType = Enum.ScaleType.Slice
+Toggle.SliceCenter = Rect.new(100, 100, 100, 100)
+Toggle.SliceScale = 0.120
+
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = Toggle
+Toggle_2.AnchorPoint = Vector2.new(0, 0.5)
+Toggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_2.BackgroundTransparency = 1.000
+Toggle_2.Position = UDim2.new(0.839999974, 0, 0.5, 0)
+Toggle_2.Size = UDim2.new(0.150000006, 0, 0.850000024, 0)
+Toggle_2.ZIndex = 4
+Toggle_2.Image = "rbxassetid://3570695787"
+Toggle_2.ImageColor3 = Color3.fromRGB(57, 62, 70)
+Toggle_2.ScaleType = Enum.ScaleType.Slice
+Toggle_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Toggle_2.SliceScale = 0.120
+
+Circle.Name = "Circle"
+Circle.Parent = Toggle_2
+Circle.AnchorPoint = Vector2.new(0, 0.5)
+Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle.BackgroundTransparency = 1.000
+Circle.Position = UDim2.new(0.100000001, 0, 0.5, 0)
+Circle.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Circle.SizeConstraint = Enum.SizeConstraint.RelativeYY
+Circle.ZIndex = 5
+Circle.Image = "rbxassetid://3570695787"
+
+TEXT_2.Name = "TEXT"
+TEXT_2.Parent = Toggle
+TEXT_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_2.BackgroundTransparency = 1.000
+TEXT_2.Position = UDim2.new(0.0197396576, 0, 0, 0)
+TEXT_2.Size = UDim2.new(0.330802947, 0, 1, 0)
+TEXT_2.ZIndex = 4
+TEXT_2.Font = Enum.Font.GothamBold
+TEXT_2.Text = "ESP-Enabeld"
+TEXT_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_2.TextScaled = true
+TEXT_2.TextSize = 14.000
+TEXT_2.TextWrapped = true
+TEXT_2.TextXAlignment = Enum.TextXAlignment.Left
+
+DropDown.Name = "DropDown"
+DropDown.Parent = MAIN_2
+DropDown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DropDown.BackgroundTransparency = 1.000
+DropDown.Position = UDim2.new(0.0500000864, 0, 0, 0)
+DropDown.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+DropDown.ZIndex = 3
+DropDown.Image = "rbxassetid://3570695787"
+DropDown.ImageColor3 = Color3.fromRGB(34, 40, 49)
+DropDown.ScaleType = Enum.ScaleType.Slice
+DropDown.SliceCenter = Rect.new(100, 100, 100, 100)
+DropDown.SliceScale = 0.120
+
+TEXT_3.Name = "TEXT"
+TEXT_3.Parent = DropDown
+TEXT_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_3.BackgroundTransparency = 1.000
+TEXT_3.Position = UDim2.new(0.0197396576, 0, 0, 0)
+TEXT_3.Size = UDim2.new(0.330802947, 0, 1, 0)
+TEXT_3.ZIndex = 4
+TEXT_3.Font = Enum.Font.GothamBold
+TEXT_3.Text = "DROP-DOWN"
+TEXT_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_3.TextScaled = true
+TEXT_3.TextSize = 14.000
+TEXT_3.TextWrapped = true
+TEXT_3.TextXAlignment = Enum.TextXAlignment.Left
+
+DropDownButton.Name = "DropDownButton"
+DropDownButton.Parent = DropDown
+DropDownButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DropDownButton.BackgroundTransparency = 1.000
+DropDownButton.Position = UDim2.new(0.579999983, 0, 0, 0)
+DropDownButton.Size = UDim2.new(0.400000006, 0, 1, 0)
+DropDownButton.ZIndex = 4
+DropDownButton.Font = Enum.Font.GothamBold
+DropDownButton.Text = ">"
+DropDownButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DropDownButton.TextScaled = true
+DropDownButton.TextSize = 14.000
+DropDownButton.TextWrapped = true
+DropDownButton.TextXAlignment = Enum.TextXAlignment.Right
+
+ScrollingFrame.Parent = DropDown
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(34, 40, 49)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 1.10000002, 0)
+ScrollingFrame.Size = UDim2.new(1, 0, 5, 0)
+ScrollingFrame.Visible = false
+ScrollingFrame.ZIndex = 5
+
+UIListLayout_2.Parent = ScrollingFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+ColorThing.Name = "ColorThing"
+ColorThing.Parent = MAIN_2
+ColorThing.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorThing.BackgroundTransparency = 1.000
+ColorThing.Position = UDim2.new(0.0500000864, 0, 0, 0)
+ColorThing.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+ColorThing.ZIndex = 3
+ColorThing.Image = "rbxassetid://3570695787"
+ColorThing.ImageColor3 = Color3.fromRGB(34, 40, 49)
+ColorThing.ScaleType = Enum.ScaleType.Slice
+ColorThing.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorThing.SliceScale = 0.120
+
+TEXT_4.Name = "TEXT"
+TEXT_4.Parent = ColorThing
+TEXT_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_4.BackgroundTransparency = 1.000
+TEXT_4.Position = UDim2.new(0.0197396576, 0, 0, 0)
+TEXT_4.Size = UDim2.new(0.330802947, 0, 1, 0)
+TEXT_4.ZIndex = 4
+TEXT_4.Font = Enum.Font.GothamBold
+TEXT_4.Text = "ESP-Color"
+TEXT_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TEXT_4.TextScaled = true
+TEXT_4.TextSize = 14.000
+TEXT_4.TextWrapped = true
+TEXT_4.TextXAlignment = Enum.TextXAlignment.Left
+
+BUTTON.Name = "BUTTON"
+BUTTON.Parent = MAIN_2
+BUTTON.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BUTTON.BackgroundTransparency = 1.000
+BUTTON.Position = UDim2.new(0.0500000864, 0, 0, 0)
+BUTTON.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+BUTTON.ZIndex = 3
+BUTTON.Image = "rbxassetid://3570695787"
+BUTTON.ImageColor3 = Color3.fromRGB(0, 173, 181)
+BUTTON.ScaleType = Enum.ScaleType.Slice
+BUTTON.SliceCenter = Rect.new(100, 100, 100, 100)
+BUTTON.SliceScale = 0.120
+
+Hot.Name = "Hot"
+Hot.Parent = BUTTON
+Hot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hot.BackgroundTransparency = 1.000
+Hot.Size = UDim2.new(1, 0, 1, 0)
+Hot.ZIndex = 3
+Hot.Font = Enum.Font.GothamBold
+Hot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hot.TextSize = 14.000
+
+
+
+
+
+TAB1.Name = "TAB1"
+TAB1.Parent = TABS
+TAB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TAB1.BackgroundTransparency = 1.000
+TAB1.BorderSizePixel = 0
+TAB1.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
+TAB1.ZIndex = 4
+TAB1.Font = Enum.Font.GothamBold
+TAB1.Text = "MAIN"
+TAB1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TAB1.TextSize = 14.000
+
+TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px.Parent = TAB1
+TextButton_Roundify_12px.Active = true
+TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px.BackgroundTransparency = 1.000
+TextButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px.Selectable = true
+TextButton_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px.ZIndex = 3
+TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px.ImageColor3 = Color3.fromRGB(57, 62, 70)
+TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px.SliceScale = 0.120
+
+UIListLayout_3.Parent = TABS
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+
+
+]]--
+
