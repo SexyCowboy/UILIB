@@ -88,7 +88,7 @@ function Lib:CreateMain(Title,VersionText)
 	Version.Size = UDim2.new(0.399168104, 0, 0.0714736357, 0)
 	Version.ZIndex = 4
 	Version.Font = Enum.Font.GothamBold
-	Version.Text = "Attempted"
+	Version.Text = VersionText
 	Version.TextColor3 = Color3.fromRGB(238, 238, 238)
 	Version.TextScaled = true
 	Version.TextSize = 14.000
