@@ -9,7 +9,7 @@ function Lib:CreateMain(Title,ActulVersion,colors)
 	local MainColor = colors.MainFrameColor
 	
 	--- Creating the items
-	print("Running Version INDEX 2.0 DEBUG VERSION, Toggle FIX")
+	print("Running Version INDEX 2.1 DEBUG VERSION, Toggle FIX")
 	local ScreenGui = Instance.new("ScreenGui")
 	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -272,18 +272,18 @@ function Lib:CreateMain(Title,ActulVersion,colors)
 				TEXT_2.TextXAlignment = Enum.TextXAlignment.Left
 				
 				Circle.MouseButton1Click:Connect(function()
-					local Enabeld = true
-					print("Circle Was Touched")
-					if Enabeld == true then
+					local Enabeld = false
+					
+					if Enabeld == false then
 						print("Circle Changed To ON")
 						local T1 = TweenService:Create(Toggle_2,TweenInfo.new(.5),{ImageColor3 = Color3.fromRGB(0, 173, 181)}):Play()
 						local T2 = TweenService:Create(Circle,TweenInfo.new(.5),{Position = UDim2.new(.55,0,.5,0)}):Play()
-						Enabeld = false
-					else
+						Enabeld = true
+					elseif Enabeld == true then
 						print("Circle Changed To OFF")
 						local T1 = TweenService:Create(Toggle_2,TweenInfo.new(.5),{ImageColor3 = Color3.fromRGB(57, 62, 70)}):Play()
 						local T2 = TweenService:Create(Circle,TweenInfo.new(.5),{Position = UDim2.new(.1,0,.5,0)}):Play()
-						Enabeld = true
+						Enabeld = false
 					end
 				end)
 				
