@@ -93,6 +93,26 @@ function Lib:CreateMain(Title,ActulVersion)
 	Version.TextScaled = true
 	Version.TextSize = 14.000
 	Version.TextWrapped = true
+	
+	local TabLibary = {}
+	function TabLibary:NewTab(TabName)
+		local TAB1 = Instance.new("TextButton")
+		TAB1.Name = TabName
+		TAB1.Parent = TABS
+		TAB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TAB1.BackgroundTransparency = 1.000
+		TAB1.BorderSizePixel = 0
+		TAB1.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
+		TAB1.ZIndex = 4
+		TAB1.Font = Enum.Font.GothamBold
+		TAB1.Text = "MAIN"
+		TAB1.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TAB1.TextSize = 14.000
+	end
+
+	return TabLibary;
 end
+
+
 
 return Lib;
