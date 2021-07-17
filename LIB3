@@ -1,0 +1,143 @@
+local Lib = {}
+
+function Lib:CreateMain(Title,ActulVersion)
+	--- Creating the items
+	local ScreenGui = Instance.new("ScreenGui")
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+	local Version = Instance.new("TextLabel")
+	local SIDEBAR = Instance.new("ImageLabel")
+	local TABS = Instance.new("Frame")
+	local MAIN = Instance.new("ImageLabel")
+	local Title_2 = Instance.new("TextLabel")
+	local Divider = Instance.new("ImageLabel")
+	local UIListLayout_3 = Instance.new("UIListLayout")
+	-- Giving dem properties
+
+	MAIN.Name = "MAIN"
+	MAIN.Parent = ScreenGui
+	MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
+	MAIN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MAIN.BackgroundTransparency = 1.000
+	MAIN.Position = UDim2.new(0.534083188, 0, 0.5, 0)
+	MAIN.Size = UDim2.new(0.281833678, 0, 0.349999994, 0)
+	MAIN.ZIndex = 2
+	MAIN.Image = "rbxassetid://3570695787"
+	MAIN.ImageColor3 = Color3.fromRGB(57, 62, 70)
+	MAIN.ScaleType = Enum.ScaleType.Slice
+	MAIN.SliceCenter = Rect.new(100, 100, 100, 100)
+	MAIN.SliceScale = 0.120
+
+	SIDEBAR.Name = "SIDEBAR"
+	SIDEBAR.Parent = ScreenGui
+	SIDEBAR.AnchorPoint = Vector2.new(0.5, 0.5)
+	SIDEBAR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	SIDEBAR.BackgroundTransparency = 1.000
+	SIDEBAR.Position = UDim2.new(0.357604951, 0, 0.5, 0)
+	SIDEBAR.Size = UDim2.new(0.0979296789, 0, 0.349999994, 0)
+	SIDEBAR.ZIndex = 2
+	SIDEBAR.Image = "rbxassetid://3570695787"
+	SIDEBAR.ImageColor3 = Color3.fromRGB(34, 40, 49)
+	SIDEBAR.ScaleType = Enum.ScaleType.Slice
+	SIDEBAR.SliceCenter = Rect.new(100, 100, 100, 100)
+	SIDEBAR.SliceScale = 0.120
+
+	TABS.Name = "TABS"
+	TABS.Parent = SIDEBAR
+	TABS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TABS.BackgroundTransparency = 1.000
+	TABS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	TABS.Position = UDim2.new(0.049999956, 0, 0.273444355, 0)
+	TABS.Size = UDim2.new(0.899999976, 0, 0.661437333, 0)
+	TABS.ZIndex = 3
+
+	Divider.Name = "Divider"
+	Divider.Parent = SIDEBAR
+	Divider.AnchorPoint = Vector2.new(0.5, 0)
+	Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Divider.BackgroundTransparency = 1.000
+	Divider.Position = UDim2.new(0.5, 0, 0.229798377, 0)
+	Divider.Size = UDim2.new(0.899999976, 0, 0, 2)
+	Divider.ZIndex = 3
+	Divider.Image = "rbxassetid://3570695787"
+	Divider.ImageColor3 = Color3.fromRGB(0, 173, 181)
+	Divider.ScaleType = Enum.ScaleType.Slice
+	Divider.SliceCenter = Rect.new(100, 100, 100, 100)
+	Divider.SliceScale = 0.120
+
+	Title_2.Name = "Title"
+	Title_2.Parent = SIDEBAR
+	Title_2.AnchorPoint = Vector2.new(0.5, 0)
+	Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title_2.BackgroundTransparency = 1.000
+	Title_2.Position = UDim2.new(0.5, 0, 0.0350569673, 0)
+	Title_2.Size = UDim2.new(0.942219853, 0, 0.126380354, 0)
+	Title_2.ZIndex = 3
+	Title_2.Font = Enum.Font.GothamBold
+	Title_2.Text = Title
+	Title_2.TextColor3 = Color3.fromRGB(238, 238, 238)
+	Title_2.TextScaled = true
+	Title_2.TextSize = 14.000
+	Title_2.TextWrapped = true
+
+	Version.Name = "Version"
+	Version.Parent = SIDEBAR
+	Version.AnchorPoint = Vector2.new(0.5, 0)
+	Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Version.BackgroundTransparency = 1.000
+	Version.Position = UDim2.new(0.5, 0, 0.129710779, 0)
+	Version.Size = UDim2.new(0.399168104, 0, 0.0714736357, 0)
+	Version.ZIndex = 4
+	Version.Font = Enum.Font.GothamBold
+	Version.Text = ActulVersion
+	Version.TextColor3 = Color3.fromRGB(238, 238, 238)
+	Version.TextScaled = true
+	Version.TextSize = 14.000
+	Version.TextWrapped = true
+	
+	UIListLayout_3.Parent = TABS
+	UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_3.Padding = Udim.new(0.05,0)
+	print("List Layout Created?")
+	
+	local TabLibary = {}
+	function TabLibary:NewTab(TabName)
+		local TAB1 = Instance.new("TextButton")
+		local TextButton_Roundify_12px = Instance.new("ImageLabel")
+		
+		TAB1.Name = TabName
+		TAB1.Parent = TABS
+		TAB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TAB1.BackgroundTransparency = 1.000
+		TAB1.BorderSizePixel = 0
+		TAB1.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
+		TAB1.ZIndex = 5
+		TAB1.Font = Enum.Font.GothamBold
+		TAB1.Text = TabName
+		TAB1.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TAB1.TextSize = 14.000
+		
+		TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
+		TextButton_Roundify_12px.Parent = TAB1
+		TextButton_Roundify_12px.Active = true
+		TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+		TextButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton_Roundify_12px.BackgroundTransparency = 1.000
+		TextButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+		TextButton_Roundify_12px.Selectable = true
+		TextButton_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+		TextButton_Roundify_12px.ZIndex = 3
+		TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
+		TextButton_Roundify_12px.ImageColor3 = Color3.fromRGB(57, 62, 70)
+		TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+		TextButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+		TextButton_Roundify_12px.SliceScale = 0.120
+	end
+
+	return TabLibary;
+end
+
+
+
+return Lib;
