@@ -1,10 +1,10 @@
 local Lib = {}
 
-function CreateMain(Title,Version)
+function CreateMain()
 	--- Creating the items
 	local ScreenGui = Instance.new("ScreenGui")
 	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	
+
 	local Version = Instance.new("TextLabel")
 	local SIDEBAR = Instance.new("ImageLabel")
 	local TABS = Instance.new("Frame")
@@ -12,7 +12,7 @@ function CreateMain(Title,Version)
 	local Title_2 = Instance.new("TextLabel")
 	local Divider = Instance.new("ImageLabel")
 	-- Giving dem properties
-	
+
 	MAIN.Name = "MAIN"
 	MAIN.Parent = ScreenGui
 	MAIN.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -26,7 +26,7 @@ function CreateMain(Title,Version)
 	MAIN.ScaleType = Enum.ScaleType.Slice
 	MAIN.SliceCenter = Rect.new(100, 100, 100, 100)
 	MAIN.SliceScale = 0.120
-	
+
 	SIDEBAR.Name = "SIDEBAR"
 	SIDEBAR.Parent = ScreenGui
 	SIDEBAR.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -40,7 +40,7 @@ function CreateMain(Title,Version)
 	SIDEBAR.ScaleType = Enum.ScaleType.Slice
 	SIDEBAR.SliceCenter = Rect.new(100, 100, 100, 100)
 	SIDEBAR.SliceScale = 0.120
-	
+
 	TABS.Name = "TABS"
 	TABS.Parent = SIDEBAR
 	TABS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -49,7 +49,7 @@ function CreateMain(Title,Version)
 	TABS.Position = UDim2.new(0.049999956, 0, 0.273444355, 0)
 	TABS.Size = UDim2.new(0.899999976, 0, 0.661437333, 0)
 	TABS.ZIndex = 3
-	
+
 	Divider.Name = "Divider"
 	Divider.Parent = SIDEBAR
 	Divider.AnchorPoint = Vector2.new(0.5, 0)
@@ -63,7 +63,7 @@ function CreateMain(Title,Version)
 	Divider.ScaleType = Enum.ScaleType.Slice
 	Divider.SliceCenter = Rect.new(100, 100, 100, 100)
 	Divider.SliceScale = 0.120
-	
+
 	Title_2.Name = "Title"
 	Title_2.Parent = SIDEBAR
 	Title_2.AnchorPoint = Vector2.new(0.5, 0)
@@ -73,12 +73,12 @@ function CreateMain(Title,Version)
 	Title_2.Size = UDim2.new(0.942219853, 0, 0.126380354, 0)
 	Title_2.ZIndex = 3
 	Title_2.Font = Enum.Font.GothamBold
-	Title_2.Text = Title
+	Title_2.Text = "aaa"
 	Title_2.TextColor3 = Color3.fromRGB(238, 238, 238)
 	Title_2.TextScaled = true
 	Title_2.TextSize = 14.000
 	Title_2.TextWrapped = true
-	
+
 	Version.Name = "Version"
 	Version.Parent = SIDEBAR
 	Version.AnchorPoint = Vector2.new(0.5, 0)
@@ -88,7 +88,7 @@ function CreateMain(Title,Version)
 	Version.Size = UDim2.new(0.399168104, 0, 0.0714736357, 0)
 	Version.ZIndex = 3
 	Version.Font = Enum.Font.GothamBold
-	Version.Text = Version
+	Version.Text = "aaa"
 	Version.TextColor3 = Color3.fromRGB(238, 238, 238)
 	Version.TextScaled = true
 	Version.TextSize = 14.000
