@@ -2,7 +2,7 @@ local Lib = {}
 
 function Lib:CreateMain(Title,ActulVersion)
 	--- Creating the items
-	print("Running Version 7 DEBUG,TextButton")
+	print("Running Version 8 DEBUG,TextButton")
 	local ScreenGui = Instance.new("ScreenGui")
 	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -268,26 +268,30 @@ function Lib:CreateMain(Title,ActulVersion)
 					local BUTTON = Instance.new("ImageLabel")
 					local Hot = Instance.new("TextButton")
 					print("Buttons Created")
+					
 					BUTTON.Name = "BUTTON"
 					BUTTON.Parent = WindowLibary
 					BUTTON.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 					BUTTON.BackgroundTransparency = 1.000
 					BUTTON.Position = UDim2.new(0.0500000864, 0, 0, 0)
 					BUTTON.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
-					BUTTON.ZIndex = 3
+					print("Got to zindex")
+					BUTTON.ZIndex = 4
 					BUTTON.Image = "rbxassetid://3570695787"
 					BUTTON.ImageColor3 = Color3.fromRGB(0, 173, 181)
 					BUTTON.ScaleType = Enum.ScaleType.Slice
 					BUTTON.SliceCenter = Rect.new(100, 100, 100, 100)
 					BUTTON.SliceScale = 0.120
+					
 					print("OutLine Created")
+					
 					Hot.Name = "Hot"
 					Hot.Parent = BUTTON
 					Hot.Text = Desc
 					Hot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 					Hot.BackgroundTransparency = 1.000
 					Hot.Size = UDim2.new(1, 0, 1, 0)
-					Hot.ZIndex = 3
+					Hot.ZIndex = 5
 					Hot.Font = Enum.Font.GothamBold
 					Hot.TextColor3 = Color3.fromRGB(255, 255, 255)
 					Hot.TextSize = 14.000
