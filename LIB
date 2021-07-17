@@ -11,6 +11,7 @@ function Lib:CreateMain(Title,ActulVersion)
 	local MAIN = Instance.new("ImageLabel")
 	local Title_2 = Instance.new("TextLabel")
 	local Divider = Instance.new("ImageLabel")
+	local UIListLayout_3 = Instance.new("UIListLayout")
 	-- Giving dem properties
 
 	MAIN.Name = "MAIN"
@@ -94,6 +95,10 @@ function Lib:CreateMain(Title,ActulVersion)
 	Version.TextSize = 14.000
 	Version.TextWrapped = true
 	
+	UIListLayout_3.Parent = TABS
+	UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+	
 	local TabLibary = {}
 	function TabLibary:NewTab(TabName)
 		local TAB1 = Instance.new("TextButton")
@@ -103,9 +108,9 @@ function Lib:CreateMain(Title,ActulVersion)
 		TAB1.BackgroundTransparency = 1.000
 		TAB1.BorderSizePixel = 0
 		TAB1.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
-		TAB1.ZIndex = 4
+		TAB1.ZIndex = 5
 		TAB1.Font = Enum.Font.GothamBold
-		TAB1.Text = "MAIN"
+		TAB1.Text = TabName
 		TAB1.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TAB1.TextSize = 14.000
 	end
